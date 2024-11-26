@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Store</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .item img {
+      max-width: 100px;
+      margin-right: 20px;
+    }
+    .item-info {
+      flex-grow: 1;
+    }
+    .item button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>ShopLocal</h1>
+        <div class="auth-buttons">
+            <a href="Login.html" class="login-button">Login</a>
+            <a href="MyCart.html" class="my-cart">My Cart</a>
+        </div>
+    </header>
+    
+  <div class="container">
+    <li>
+    <a href="store3.html">
+        <img src="Images/Shop3Logo.png" alt="Store 3 logo">
+        <h2>Shivangi Cake House</h2>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+        <p>Shop No.7, Ansal Plaza, Greater Noida</p>
+      </a>
+    </li>
+    
+    <!-- Item 1: Truffel Cake -->
+    <div class="item">
+      <img src="Images/truffle-cake.jpg" alt="Truffle Cake">
+      <div class="item-info">
+        <h3>Truffle Cake</h3>
+        <p>Delicious chocolate truffle cake with rich creamy layers.</p>
+        <p>$10</p>
+      </div>
+      <button onclick="addToCart(1)">Add to Cart</button>
+    </div>
+
+    <!-- Item 2: Chocolate Cake -->
+    <div class="item">
+      <img src="Images/chocolate-cake.jpg" alt="Chocolate Cake">
+      <div class="item-info">
+        <h3>Chocolate Cake</h3>
+        <p>Classic chocolate cake with smooth chocolate frosting.</p>
+        <p>₹500</p> <!-- Consistent with Indian currency -->
+      </div>
+      <button onclick="addToCart(2)">Add to Cart</button>
+    </div>
+
+    <!-- Item 3: Chocolate Brownie -->
+    <div class="item">
+      <img src="Images/chocolate-brownie.jpg" alt="Chocolate Brownie">
+      <div class="item-info">
+        <h3>Chocolate Brownie</h3>
+        <p>Decadent fudgy chocolate brownie topped with walnuts.</p>
+        <p>₹100</p>
+      </div>
+      <button onclick="addToCart(3)">Add to Cart</button>
+    </div>
+
+    <!-- Item 4: Cookie -->
+    <div class="item">
+      <img src="Images/cookie.jpg" alt="Cookie">
+      <div class="item-info">
+        <h3>Cookie</h3>
+        <p>Freshly baked cookies with a crunchy texture.</p>
+        <p>₹180</p>
+      </div>
+      <button onclick="addToCart(4)">Add to Cart</button>
+    </div>
+
+    <!-- Item 5: Pastry -->
+    <div class="item">
+      <img src="Images/pastry.jpg" alt="Pastry">
+      <div class="item-info">
+        <h3>Pastry</h3>
+        <p>Delicious layered pastry with cream and fruit toppings.</p>
+        <p>₹70</p>
+      </div>
+      <button onclick="addToCart(5)">Add to Cart</button>
+    </div>
+
+    <!-- Item 6: Cracker -->
+    <div class="item">
+      <img src="Images/cracker.jpg" alt="Cracker">
+      <div class="item-info">
+        <h3>Cracker</h3>
+        <p>Crunchy crackers, perfect for a light snack.</p>
+        <p>₹200</p>
+      </div>
+      <button onclick="addToCart(6)">Add to Cart</button>
+    </div>
+  </div>
+
+  <script>
+    function addToCart(itemId) {
+      alert("Item " + itemId + " added to cart!");
+    }
+  </script>
+</body>
+</html>

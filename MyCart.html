@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Cart</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+    tr:hover {
+      background-color: #ddd;
+    }
+    .total-row {
+      font-weight: bold;
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ 
+<header>
+    <h1>Village Mart</h1> <!-- Changed here -->
+    <div class="auth-buttons">
+        <a href="Login.html" class="login-button">Login</a>
+    </div>
+</header>
+   
+  <h2>My Cart</h2>
+  <table id="cart">
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Item 1</td>
+        <td>₹10</td>
+        <td><input type="number" value="1" min="1" onchange="calculateTotal(0, this.value)"></td>
+        <td class="item-total">₹10</td>
+      </tr>
+      <tr>
+        <td>Item 2</td>
+        <td>₹20</td>
+        <td><input type="number" value="1" min="1" onchange="calculateTotal(1, this.value)"></td>
+        <td class="item-total">₹20</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr class="total-row">
+        <td colspan="3">Total:</td>
+        <td id="cart-total">₹30</td>
+      </tr>
+    </tfoot>
+  </table>
+  <p><a href="index.html">Back to Store</a></p>
+
+  <script>
+    function calculateTotal(index, quantity) {
+      const prices = [10, 20]; // Prices of items
+      const totalCell = document.getElementById('cart-total');
+      const itemTotalCell = document.querySelectorAll('.item-total')[index];
+
+      const price = prices[index];
+      const total = price * quantity;
+      itemTotalCell.textContent = `₹${total}`;  // Corrected here
+      
+      let grandTotal = 0;
+      document.querySelectorAll('.item-total').forEach(cell => {
+        grandTotal += parseFloat(cell.textContent.replace('₹', ''));
+      });
+      totalCell.textContent = `₹${grandTotal}`;  // Corrected here
+    }
+  </script>
+</body>
+</html>

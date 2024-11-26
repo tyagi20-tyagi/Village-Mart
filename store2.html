@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Store</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    .item img {
+      max-width: 100px;
+      margin-right: 20px;
+    }
+    .item-info {
+      flex-grow: 1;
+    }
+    .item button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>ShopLocal</h1>
+        <div class="auth-buttons">
+            <a href="Login.html" class="login-button">Login</a>
+            <a href="MyCart.html" class="my-cart">My Cart</a> <!-- Updated href to valid page -->
+        </div>
+    </header>
+    
+  <div class="container">
+    <li>
+    <a href="store3.html">
+        <img src="Images/Shop2Logo.webp" alt="Store 3 logo">
+        <h2>Bharat Stationary</h2>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+        <p>Shop No.7, Ansal Plaza, Greater Noida</p>
+      </a>
+    </li>
+    
+    <!-- Item 1 -->
+    <div class="item">
+      <img src="Images/item1.jpg" alt="Item 1">
+      <div class="item-info">
+        <h3>Notebook</h3>
+        <p>High-quality notebook for daily use.</p>
+        <p>₹110</p>
+      </div>
+      <button onclick="addToCart(1)">Add to Cart</button>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="item">
+      <img src="Images/item2.jpg" alt="Item 2">
+      <div class="item-info">
+        <h3>Pens</h3>
+        <p>Pack of 5 pens, smooth writing.</p>
+        <p>₹20</p>
+      </div>
+      <button onclick="addToCart(2)">Add to Cart</button>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="item">
+      <img src="Images/item3.jpg" alt="Item 3">
+      <div class="item-info">
+        <h3>Sticky Notes</h3>
+        <p>Set of colorful sticky notes for notes and reminders.</p>
+        <p>₹100</p>
+      </div>
+      <button onclick="addToCart(3)">Add to Cart</button>
+    </div>
+
+    <!-- Item 4 -->
+    <div class="item">
+      <img src="Images/item4.jpg" alt="Item 4">
+      <div class="item-info">
+        <h3>Fountain Pen</h3>
+        <p>Elegant fountain pen for smooth writing.</p>
+        <p>₹180</p>
+      </div>
+      <button onclick="addToCart(4)">Add to Cart</button>
+    </div>
+
+    <!-- Item 5 -->
+    <div class="item">
+      <img src="Images/item5.jpg" alt="Item 5">
+      <div class="item-info">
+        <h3>Marker</h3>
+        <p>Highlighter marker for important notes.</p>
+        <p>₹70</p>
+      </div>
+      <button onclick="addToCart(5)">Add to Cart</button>
+    </div>
+
+    <!-- Item 6 -->
+    <div class="item">
+      <img src="Images/item6.jpg" alt="Item 6">
+      <div class="item-info">
+        <h3>Highlighters</h3>
+        <p>Set of 3 colorful highlighters for clear marking.</p>
+        <p>₹200</p>
+      </div>
+      <button onclick="addToCart(6)">Add to Cart</button>
+    </div>
+  </div>
+
+  <script>
+    function addToCart(itemId) {
+      // You can perform actions like adding the item to the cart here
+      alert("Item " + itemId + " added to cart!");
+    }
+  </script>
+</body>
+</html>
